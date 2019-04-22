@@ -1,33 +1,172 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+header {
+  /* border: 1px solid black;s */
+  width: 100vw;
+  height: 80vh;
+
+  background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Masthead {
+  width: auto;
+  height: 50vh;
+  /* border: 1px solid white; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  border: 1px solid white;
+  width: 55vw;
+  height: 10vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+}
+
+nav h1 {
+  color: #fed136;
+}
+
+#hamburger-btn {
+  display: none;
+}
+
+ul {
+  border: 1px solid white;
+  width: 30vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0;
+}
+
+ul a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.Side-menu-closed {
+  animation: closeMenu 1s;
+  display: none;
+}
+
+.Side-menu-list {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  #hamburger-btn {
+    border: none;
+    background: #fed136;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  #hamburger-btn img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+  .Nav-list {
+    display: none;
+  }
+  .Side-menu-open {
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    top: 9vh;
+    left: 0px;
+    background: #fed136;
+    display: flex;
+    justify-content: center;
+    animation: openMenu 1s;
+  }
+  .Side-menu-closed {
+    width: 100vw;
+    height: 0vh;
+    position: absolute;
+    top: 9vh;
+    left: 0px;
+    background: #fed136;
+    animation: closeMenu 1s;
+  }
+  .Side-menu-list {
+    /* border: 1px solid black; */
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around;
+    align-items: center; */
+  }
+}
+
+@keyframes openMenu {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(11vh);
+  }
+}
+@keyframes closeMenu {
+  from {
+    transform: translateY(11vh);
+  }
+  to {
+    transform: translateY(0vh);
+  }
+}
+
+.Intro-container {
+  /* border: 1px solid white; */
+  padding-top: 30vh;
+
+  width: auto;
+  height: auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Intro-container h3 {
+  font-size: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Intro-container h1 {
+  font-size: 5em;
+}
+
+section {
+  width: 100vw;
+  height: 50vh;
 }
